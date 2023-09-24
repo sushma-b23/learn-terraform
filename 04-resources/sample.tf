@@ -1,17 +1,17 @@
 provider "aws" {
-    region = "us-east-1"
-    }
-data "aws_ami" "centos8" {
-      most_recent = true
-      name_regex  = "Centos-8-DevOps-Practice"
-      owners      = ["973714476881"]
-  }
+    region  = "us-east-1"
+ }
+data "aws_ami" "example" {
+  most_recent = true
+  name_regex  = "Centos-8-DevOps-Practice"
+  owners      = ["973714476881"]
+}
 
 resource "aws_instance" "web" {
-   ami = data.aws_ami.centos8.id
-   instance_type = "t3.micro"
+   ami              = data.aws_ami.centos8.id
+   instance_type    = "t3.micro"
 
    tags = {
-    name = "test-centos8"
-    }
-    }
+     Name = "test-centos8"
+  }
+}
