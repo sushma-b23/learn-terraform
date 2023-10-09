@@ -15,5 +15,6 @@ resource "aws_instance" "web" {
   }
 
   output "instance_profile" {
-     value = aws_instance.web.outpost_arn
+     #value = aws_instance.web.*.id[1]
+     value = try(aws_instance.web.*.id[1], "")
   }
