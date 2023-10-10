@@ -3,7 +3,7 @@ resource "aws_instance" "web" {
    instance_type  = var.type == "null" ? "t3.micro" : var.type
 
    tags = {
-    Name = "demo"
+     Name = "demo"
    }
 }
 
