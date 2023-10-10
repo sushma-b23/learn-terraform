@@ -1,5 +1,5 @@
 resource "aws_instance" "web" {
-   for_each            = var.components
+   for_each           = var.components
    ami              = data.aws_ami.centos8.id
    instance_type    = "t3.micro"
 
@@ -25,14 +25,12 @@ data "aws_ami" "centos8" {
 variable "components" {
       default = {
         cart  = {
-          name = "cart",
-          instance_type = "t3.small"
+         name = "cart",
+         instance_type = "t3.small"
         }
-
         catalogue = {
-          name  = {
+          name = "catalogue",
           instance_type = "t3.micro"
-         }
-      }
-   }
+        }
+     }
 }
