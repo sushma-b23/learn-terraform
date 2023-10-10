@@ -31,6 +31,6 @@ variable "components" {
          catalogue = {
                     name = "catalogue",
                     instance_type = "t3.micro"
-                  }
-      }
+       }
+    }
 }
