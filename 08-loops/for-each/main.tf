@@ -32,7 +32,7 @@ variable "components" {
         catalogue = {
           name  = {
           instance_type = "t3.micro"
-          }
-        }
-     }
+         }
+      }
+   }
 }
