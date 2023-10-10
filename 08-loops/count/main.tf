@@ -5,7 +5,7 @@ resource "aws_instance" "web" {
 
 
    tags = {
-     Name = "test-centos8"
+     Name = var.componennts[count.index]
   }
 }
 
