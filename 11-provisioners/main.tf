@@ -33,8 +33,8 @@ resource "null_resource" "provision" {
    }
 }
 
-resource "aws_security_group" "allow_tls" {
-       name  = "allow_tls"
+resource "aws_security_group" "allow_tls1" {
+       name  = "allow_tls1"
        description  = "Allow TLS inbound traffic"
 
        ingress  {
@@ -52,7 +52,7 @@ resource "aws_security_group" "allow_tls" {
         ipv6_cidr_blocks = ["::/0"]
      }
      tags = {
-        Name = "allow_tls"
+        Name = "allow_tls1"
 
      }
 }
